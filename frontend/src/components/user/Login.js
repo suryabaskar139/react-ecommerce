@@ -16,7 +16,11 @@ export default function Login() {
   const location = useLocation();
 
   const {loading, error, isAuthenticated} = useSelector(state => state.authState)
+  console.log("location",location);
   const redirect = location.search ? '/'+ location.search.split('=')[1] : '/';
+
+  // true -> /shipping  false "/" or we can use '' empty quotes also
+  
  
   const submitHandler = (e) => {
       e.preventDefault();
