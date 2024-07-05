@@ -22,7 +22,7 @@ export const validateShippping = (shippingInfo,navigate) => {
 export default function Shipping() {
   const allCountries = [];
   
-  const { shippingInfo } = useSelector((state) => state.cartState);
+  const { shippingInfo={} } = useSelector((state) => state.cartState);
   const navigate = useNavigate();
 
   const [countries, setCountries] = useState([]);
